@@ -4,7 +4,7 @@ use store_flows::{del, get, set};
 
 #[no_mangle]
 pub fn run() {
-    listen_to_channel("reactor-space", "t1", |sm| {
+    listen_to_channel("reactor-space", "t2", |sm| {
         let last_result = match sm.text == "C" {
             true => {
                 del("last_result");
